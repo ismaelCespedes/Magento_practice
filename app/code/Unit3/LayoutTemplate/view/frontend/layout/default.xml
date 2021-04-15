@@ -6,5 +6,10 @@
             <block name="footer-hello"
             template="Unit3_LayoutTemplate::my-footer.phtml"></block>
         </referenceContainer>
+
+        <referenceContainer name="header-wrapper">
+            <block name="currency-information"
+                   template="Unit3_LayoutTemplate::currency-information.phtml"></block>
+        </referenceContainer>
     </body>
 </page>
