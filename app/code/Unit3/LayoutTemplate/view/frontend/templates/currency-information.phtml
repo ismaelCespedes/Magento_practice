@@ -1,0 +1,28 @@
+<?php
+try {
+    $client = new Zend_Http_Client();
+    $client->setUri('http://data.fixer.io/api/latest?access_key=a15a4c75991303bb7c7284c87a2e5624&format=1&symbols=USD,EUR');
+    $responseBody = $client->request()->getBody();
+    $usd = explode("\"USD\":", $responseBody)[1];
+    $eur = explode(",", $usd)[0];
+    $currencyOfficial = '1 EUR='.$eur.' USD';
+} catch (Exception $e) {
+    $currencyOfficial = $e;
+}
+?>
+<div class="fixed_currency">
+    <?php
+        echo $currencyOfficial;
+    ?>
+</div>
+<style>
+    .fixed_currency{
+        padding: 5px;
+        text-align: center;
+        background: #6e716e;
+        color: #FFFFFF;
+        width: 150px;
+        float: right;
+        border-radius: 5px;
+    }
+</style>
