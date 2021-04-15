@@ -1,1 +1,24 @@
 <h3><strong>Powered by Wagento</strong></h3>
+<style>
+    #qty {
+        /*for absolutely positioning spinners*/
+        position: relative;
+        padding: 5px;
+        padding-right: 25px;
+    }
+
+    #qty::-webkit-inner-spin-button,
+    #qty::-webkit-outer-spin-button {
+        opacity: 1;
+    }
+
+    #qty::-webkit-outer-spin-button,
+    #qty::-webkit-inner-spin-button {
+        -webkit-appearance: inner-spin-button !important;
+        width: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+</style>
