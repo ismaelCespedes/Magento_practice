@@ -1,2 +1,2 @@
 # m2git
-Magento practice project.
+Magento practice project for add validation to reviews, customize product Page, and add new pages...
